@@ -27,7 +27,7 @@ describe "AtomHtmlTemplates", ->
       activationPromise
 
     runs ->
-      expect(editor.getText()).toEqual("nie ma takiej opcji")
+      expect(editor.getText()).toEqual("No existe tal opción.")
 
   it " html5 text", ->
       editor = atom.workspace.getActiveTextEditor()
@@ -41,24 +41,24 @@ describe "AtomHtmlTemplates", ->
 
       runs ->
         expect(editor.getText().replace /\s+/g, '').toEqual """
-          <!doctype html>
-          <html lang="en">
+          <!DOCTYPE html>
+          <html lang="es">
+
           <head>
-            <meta charset ="utf-8">
-
-            <title>Title of your project</title>
-            <meta name = "description" content="The HTML5 Herald">
-            <meta name = "author" content="SitePoint">
-
-            <link rel = "stylesheet" href="css/styles.css?v=1.0">
-
-            <!--[if lt IE 9]>
-            <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <![endif]-->
+              <meta charset="UTF-8">
+              <title>Título</title>
+              <meta name="description" content="Descripción">
+              <link rel="stylesheet" href="RUTA">
+              <!-- Para compatibilidad con Internet Explorer 9 -->
+              <!--[if lt IE 9]>
+                <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+              <![endif]-->
           </head>
+
           <body>
-            <script src = "js/scripts.js"></script>
+
           </body>
+
           </html>
         """.replace /\s+/g, ''
     it " bootstrap-foundation text", ->
