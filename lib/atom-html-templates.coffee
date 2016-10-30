@@ -71,7 +71,7 @@ module.exports = AtomHtmlTemplates =
                                     #{@defaultStyles}
                                      #{@returnAdd(@additionalStyles)}
                                      <!--[if lt IE 9]>
-                                       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                                       <script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
                                      <![endif]-->
                                  </head>
 
